@@ -12,82 +12,22 @@
       align-items: center;
       height: 100vh;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      transition: all 0.3s ease-in-out;
     }
 
     img {
       width: 300px;
       height: auto;
       filter: contrast(105%) brightness(95%);
-      animation: float 10s infinite linear;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-2px); }
-      100% { transform: translateY(0px); }
-    }
-    .hidden-div {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
-      opacity: 0;
-    }
-
-    /* Unused styles */
-    .ghost {
-      color: rgba(255,255,255,0.05);
-      text-shadow: 0 0 10px rgba(255,255,255,0.1);
-      pointer-events: none;
-      user-select: none;
-    }
-
-    .matrix {
-      font-family: 'Courier New', Courier, monospace;
-      background: repeating-linear-gradient(
-        to bottom,
-        #000,
-        #111 2px,
-        #000 4px
-      );
-      font-size: 0.1px;
     }
   </style>
 </head>
 <body>
 
-  <img src="instagram.png" alt="instagram">
-  <!--paaskeegg2-->
-  <script>
-    const preloadAssets = [
-      "phantom-loader.js",
-      "invisible-font.woff2",
-      "data-cache.json"
-    ];
-
-    function preload() {
-      for (let i = 0; i < preloadAssets.length; i++) {
-        const a = document.createElement('link');
-        a.rel = "preload";
-        a.href = preloadAssets[i];
-        document.head.appendChild(a);
-      }
-    }
-
-    preload();
-
-    function ghostFunction() {
-      return Math.random() * Math.PI * 42;
-    }
-
-    const unusedData = {
-      version: "0.0.1-beta",
-      alphaTest: false,
-      notes: ["to-do", "check index offset", "rebuild ghost layout"]
-    };
-  </script>
+  <img 
+    src="instagram.png" 
+    alt="instagram" 
+    data-secret="paaskeegg2"
+  >
 
 </body>
 </html>
